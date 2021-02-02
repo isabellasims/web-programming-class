@@ -1,0 +1,85 @@
+p{
+    font-size:30px;
+}
+#paneerpic{
+     width: 300px;
+     height:300px;
+ }
+#hikepic{
+    width: 300px;
+    height:300px;
+}
+#guitarpic{
+    width: 300px;
+    height:300px;
+}
+#rainpic{
+    width: 300px;
+    height:300px;
+}
+#c-pic{
+    width: 300px;
+    height:300px;
+}
+#mebox{
+    width: 500px;
+    height:120px;
+    background-color: deeppink;
+}
+#me{
+    font-size: 32px;
+
+    color: aliceblue;
+
+}
+#happy{
+    background-color: deeppink;
+    color: aliceblue;
+
+}
+#sad{
+    background-color: #0215ee;
+    color: aliceblue;
+
+}
+
+#happytext {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32px;
+}
+
+#sadtext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:32px;
+}
+.links{
+    text-decoration: none;
+}
+.links:hover{
+    text-decoration: underline;
+}
+body {
+    background-color: pink;
+}
+dt{
+    font-size:32px;
+}
+dd{
+    font-size:20px;
+}
+
+p::first-letter {
+    color: #4c58fc;
+    float: left;
+    font-size: 1.5em;
+    margin: 0 .1em 0 0;
+    line-height: 0.85;
+}
+
+
+li:nth-child(odd) {
+    color: black;
+}
+li:nth-child(even) {
+    color: #636ef4;
+}
