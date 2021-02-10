@@ -31,10 +31,16 @@
 
 .lang-text{
     margin-left: 20px;
-}
-
-#javascript{
     font-size: 20px;
     margin-top: 5px;
-
 }
+
+
+.bar{
+    height:20px;
+}
+/*#javascript{*/
+/*    font-size: 20px;*/
+/*    margin-top: 5px;*/
+
+/*}*/
