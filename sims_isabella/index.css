@@ -7,8 +7,10 @@
     /*padding: 10px;*/
 
 }
-/*container for lang section*/
-#langs{
+
+/* START LANGUAGES*/
+
+#langs{ /*container for lang section*/
     width: 100%;
     height:400px;
 
@@ -20,11 +22,10 @@
     text-align: center;
 }
 
-/*h2 tag for langs */
-#lang-text-top{
+
+#lang-text-top{ /*h2 tag for langs */
     font-weight: bold;
     margin-left: 5px;
-
 }
 
 
@@ -39,8 +40,4 @@
     height:20px;
     margin-bottom: 5px;
 }
-/*#javascript{*/
-/*    font-size: 20px;*/
-/*    margin-top: 5px;*/
-
-/*}*/
+/* END LANGUAGES*/
