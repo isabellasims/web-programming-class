@@ -11,11 +11,16 @@ body{
 
 }
 
+
+
 header{
     background: ghostwhite;
-    height: 150px;
-    font-size: 30px;
-    padding: 20px;
+    /*height: 80px;*/
+    /*font-size: 30px;*/
+    /*padding: 20px;*/
+    padding: 5px;
+    font-style: italic;
+    margin:0 auto;
 
 }
 
@@ -32,21 +37,51 @@ aside{
     margin-right: 30px;
 }
 
-
-section{
-    background-color: gray;
-}
 figure{
     text-align: center;
-    width: 80%;
+    /*width: 70%;*/
+    padding: 20px;
 }
 figure > img {
-    /* this way don't have to work on centering with its div*/
-    width: 100%;
+    width: 100%;  /* this way don't have to work on centering with its div*/
 }
 
 #scientific-name{
     text-align: right;
     font-size:20px;
     font-style: italic;
+    font-weight: bold;
 }
+
+section{
+    background-color: black;
+    padding: 40px;
+}
+
+h2{
+    background: ghostwhite;
+
+}
+
+p{
+    background: ghostwhite;
+    font-size:30px;
+}
+
+/*h2{*/
+/*    text-align: center;*/
+/*}*/
+
+article{
+    /*display: flex;*/
+    background: ghostwhite;
+    /*justify-content:space-between;*/
+}
+
+article > img {
+    height: 100px;
+
+
+}
+
+
