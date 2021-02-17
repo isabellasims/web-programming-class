@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap');
+
+
+
+body{
+    background-color: #AED581;
+    font-family: Oxygen, sans-serif;
+    padding: 10px;
+    margin: 20px;
+    display: block;
+
+}
+
+header{
+    background: ghostwhite;
+    height: 150px;
+    font-size: 30px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+aside{
+    background: ghostwhite;
+    width: 20%;
+}
+
+main{
+    /* allows everything in main to wrap */
+    display: flex;
+}
+section{
+    //display: block;
+}
