@@ -15,9 +15,6 @@ body{
 
 header{
     background: ghostwhite;
-    /*height: 80px;*/
-    /*font-size: 30px;*/
-    /*padding: 20px;*/
     padding: 5px;
     font-style: italic;
     margin:0 auto;
@@ -25,10 +22,8 @@ header{
 }
 
 main{
-    /* allows everything in main to wrap */
     padding-top: 30px;
-    display: flex;
-    /*padding: 30px;*/
+    display: flex; /* allows everything in main to wrap */
 }
 
 aside{
@@ -38,19 +33,28 @@ aside{
 }
 
 figure{
-    text-align: center;
-    /*width: 70%;*/
+    /*text-align: center;*/
+    /*width:70%;*/
+    margin: 0 auto;
     padding: 20px;
+    width: 200px;
 }
 figure > img {
     width: 100%;  /* this way don't have to work on centering with its div*/
 }
 
-#scientific-name{
-    text-align: right;
-    font-size:20px;
-    font-style: italic;
-    font-weight: bold;
+/*#scientific-name{*/
+/*    text-align: right;*/
+/*    font-size:20px;*/
+/*    font-style: italic;*/
+/*    font-weight: bold;*/
+/*}*/
+
+figure > figcaption {
+        text-align: right;
+        font-size:10px;
+        font-style: italic;
+        font-weight: bold;
 }
 
 section{
@@ -67,21 +71,26 @@ p{
     background: ghostwhite;
     font-size:30px;
 }
+/* Koala Facts */
+section > header > h2{
+    text-align: center;
+    font-weight: bold;
+}
 
-/*h2{*/
-/*    text-align: center;*/
-/*}*/
+section > p {
+    padding: 10px;
+    font-size: 20px;
+}
 
 article{
     /*display: flex;*/
     background: ghostwhite;
-    /*justify-content:space-between;*/
+    justify-content:space-between;
 }
 
 article > img {
-    height: 100px;
-
-
+    height: 200px;
+    padding: 5px;
 }
 
 
