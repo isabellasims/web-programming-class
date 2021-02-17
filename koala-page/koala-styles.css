@@ -5,7 +5,7 @@
 body{
     background-color: #AED581;
     font-family: Oxygen, sans-serif;
-    padding: 10px;
+    padding: 30px;
     margin: 20px;
     display: block;
 
@@ -16,18 +16,37 @@ header{
     height: 150px;
     font-size: 30px;
     padding: 20px;
-    margin: 0 auto;
+
+}
+
+main{
+    /* allows everything in main to wrap */
+    padding-top: 30px;
+    display: flex;
+    /*padding: 30px;*/
 }
 
 aside{
     background: ghostwhite;
     width: 20%;
+    margin-right: 30px;
 }
 
-main{
-    /* allows everything in main to wrap */
-    display: flex;
-}
+
 section{
-    //display: block;
+    background-color: gray;
+}
+figure{
+    text-align: center;
+    width: 80%;
+}
+figure > img {
+    /* this way don't have to work on centering with its div*/
+    width: 100%;
+}
+
+#scientific-name{
+    text-align: right;
+    font-size:20px;
+    font-style: italic;
 }
