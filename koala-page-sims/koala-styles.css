@@ -39,8 +39,6 @@ aside > ul {
 }
 
 figure{
-    /*text-align: center;*/
-    /*width:70%;*/
     margin: 0 auto;
     padding: 20px;
     width: 200px;
@@ -49,17 +47,8 @@ figure > img {
     width: 100%;  /* this way don't have to work on centering with its div*/
 }
 
-/*#scientific-name{*/
-/*    text-align: right;*/
-/*    font-size:20px;*/
-/*    font-style: italic;*/
-/*    font-weight: bold;*/
-/*}*/
-
 #down-under{
     border: .1em solid #040502;
-    /*border-radius: 1em;*/
-    /*border-bottom-width: 1em;*/
 }
 
 figure > figcaption {
