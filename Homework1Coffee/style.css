@@ -2,6 +2,7 @@
 
 body{
     background-color: #f2f2f2;
+    margin: 0 auto;
 
 }
 
@@ -20,25 +21,46 @@ body{
 }
 
 /*ul*/
-#horizontal-list{
+.horizontal-list{
     background-color: #CC5A2A;
     text-align: center;
     padding:0;
 
 }
 
-#horizontal-list li{
+.horizontal-list li{
     display: inline;
     text-decoration: none;
     padding: 40px;
 
 }
 /* nav links*/
-#horizontal-list a{
+.horizontal-list a{
     text-decoration: none;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
 }
 /*END NAV BAR*/
+.content{
+
+}
+.large-img-container{
+
+}
+.large-img-container img{
+    margin: 0 auto;
+    display:block;
+    width: 80%;
+}
+#contact-info {
+    background-color: #CC5A2A;
+    text-align: center;
+    padding: 0;
+    display: table;
+    margin: 0 auto;
+    width: 80%;
+    /*width: 100%;*/
+}
+
 
