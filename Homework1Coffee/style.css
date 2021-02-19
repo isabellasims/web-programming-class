@@ -2,6 +2,7 @@
 
 body{
     background-color: #f2f2f2;
+
 }
 
 #big_title{
@@ -10,3 +11,34 @@ body{
     text-align: center;
     color: brown;
 }
+
+/*START NAV BAR*/
+#nav_bar{
+    display: table;
+    margin: 0 auto;
+    /*width: 70%*/
+}
+
+/*ul*/
+#horizontal-list{
+    background-color: #CC5A2A;
+    text-align: center;
+    padding:0;
+
+}
+
+#horizontal-list li{
+    display: inline;
+    text-decoration: none;
+    padding: 40px;
+
+}
+/* nav links*/
+#horizontal-list a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*END NAV BAR*/
+
