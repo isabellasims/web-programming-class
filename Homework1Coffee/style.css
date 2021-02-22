@@ -24,6 +24,7 @@ body{
     margin:0 auto;
     padding-right: 10px;
     padding-bottom: 20px;
+    padding-left:30px;
 
 }
 
@@ -34,7 +35,7 @@ body{
 #nav_bar{
     display: table;
     margin: 0 auto;
-    /*width: 70%*/
+
 }
 
 
@@ -49,8 +50,6 @@ body{
 
 .horizontal-list:hover{
     background-color: #672526;
-    /*text-align: center;*/
-    /*padding:0;*/
 
 }
 
@@ -70,41 +69,33 @@ body{
 
 
 
-/*#sunflower-container img{*/
-/*    float: left;*/
-/*    width: 100px;*/
-/*    height: 75px;*/
-/*}*/
-/*END NAV BAR*/
-.content{
 
-}
+/*END NAV BAR*/
+
 
 #twitter{
-    /*padding-left: 80%;*/
+
     float:right;
     width: 20px;
     height: 20px;
     padding-right:20px;
     padding-bottom: 10px;
-    /*padding-top: 50px;*/
-    /*padding-bottom: 10px;*/
+    padding-top: 50px;
+
 }
 
 
 #fb{
-    /*padding-left: 80%;*/
+
     float:right;
     width: 20px;
     height: 20px;
     padding-right:10px;
-    /*padding-top: 50px;*/
+    padding-top: 50px;
     padding-bottom: 10px;
 }
 
-.large-img-container{
 
-}
 .large-img-container img{
     margin: 0 auto;
     display:block;
@@ -118,7 +109,7 @@ body{
     display: table;
     margin: 0 auto;
     width: 80%;
-    /*width: 100%;*/
+
 }
 
 .non-link-info{
@@ -141,4 +132,57 @@ body{
 #input {
     padding-right: 120px;
     text-align: right;
+}
+
+input:hover {
+    padding-right: 120px;
+    text-align: right;
+    border-width: 5px;
+}
+
+#bannerimage {
+    width: 100%;
+    background-image: url("https://i.ibb.co/1Jshfh3/Screen-Shot-2021-02-21-at-9-05-53-PM.png");
+    height: 100px;
+    background-color: purple;
+    background-position: center;
+    padding-left:100px;
+}
+#contact-info2{
+    background-color: #e96133;
+    text-align: center;
+    padding: 0;
+    display: table;
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+
+#contact-info div{
+    border: 1px solid white;
+    display:flex;
+    flex-basis: 100%;
+    text-align: center;
+
+}
+#table-container{
+    display:flex;
+    text-align: center;
+
+}
+#table-container div{
+    text-align: center;
+
+}
+
+#one{
+     flex:1;
+    text-align: center;
+ }
+#two{
+    flex:2;
+}
+#three{
+    flex:3;
 }
