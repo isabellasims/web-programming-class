@@ -9,9 +9,10 @@ body{
 
 #big_title{
     font-family: 'Dancing Script', cursive;
-    font-size: 24px;
+    font-size: 40px;
     text-align: center;
     color: brown;
+    padding-top: 20px;
 }
 
 /*START NAV BAR*/
@@ -46,7 +47,12 @@ body{
 
  }
 
+.horizontal-list:hover{
+    background-color: #672526;
+    /*text-align: center;*/
+    /*padding:0;*/
 
+}
 
 .horizontal-list li{
     display: inline;
@@ -101,7 +107,7 @@ body{
 }
 
 #contact-info {
-    background-color: #CC5A2A;
+    background-color: #e96133;
     text-align: center;
     padding: 0;
     display: table;
@@ -121,7 +127,13 @@ body{
     margin: 0 auto;
 }
 
+
 #tm{
     text-align: center;
     color: saddlebrown;
+}
+
+#input {
+    padding-right: 120px;
+    text-align: right;
 }
