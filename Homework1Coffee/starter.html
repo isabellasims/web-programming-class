@@ -8,49 +8,36 @@
         <!--here you can request font-->
     </head>
     <body>
-        <div id="container" style = "width:1200px">
+
+        <div id="container" >
 
             <div id="header">
                 <div id="bannerimage"></div>
                 <h1 id="big_title">Sun Flower Coffee Shop</h1>
             </div>
 
-
-
-
             <div id = "nav_bar">
 
-                <img id = "sunflower-container" src="SkeletonFiles/Sunflower.png" alt="Logo">
+                <img id = "sunflower-container" src="Sunflower.png" alt="Logo">
                 <a id = "t-link" href="https://twitter.com/" target="_blank">
-                    <img id = "twitter" src="SkeletonFiles/twitter.png" alt="twitter">
+                    <img id = "twitter" src="twitter.png" alt="twitter">
                 </a>
 
 
 
                 <a href="https://www.facebook.com/" target="_blank">
-                    <img id = "fb" src="SkeletonFiles/Facebook.png" alt="facebook">
+                    <img id = "fb" src="Facebook.png" alt="facebook">
                 </a>
-<!--                <img id = "twitter" src="SkeletonFiles/twitter.png" alt="twitter">-->
-<!--                <img id = "fb" src="SkeletonFiles/Facebook.png" alt="facebook">-->
                 <div class = "table">
-<!--                    <img id = "fb" src="SkeletonFiles/Facebook.png" alt="facebook">-->
-
-
-
 
                     <a href="/">
             </a>
                 <ul class = "horizontal-list">
-<!--                    <li></li>-->
+
                     <!--On a real website, you would put the URL you want to navigate to inside href, here, you can create subsequent .html file for the links to work-->
                     <li><a href="about-us.html">About us</a></li>
 
-                    <li>
-
-                        <a href="#our-coffee">Our Coffee</a>
-
-
-                    </li>
+                    <li><a href="#our-coffee" onclick="myFunction()">Our Coffee</a></li>
                     <li><a href="#shop">Our Shop</a></li>
                     <li><a href="#press">Press</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -64,7 +51,6 @@
 
 
                 </div>
-<!--             <p></p>-->
             </div>
 
 
@@ -72,7 +58,7 @@
 
 
                    <div class = "large-img-container">
-                    <img src="SkeletonFiles/home-02.jpg" alt="Italian Trulli">
+                    <img src="home-02.jpg" alt="Italian Trulli">
 
                 </div>
 <div id = "contact-info">
@@ -95,11 +81,6 @@
         </div>
 <section >
     <p id = "subscribe">Subscribe to our newsletter</p>
-
-<!--    <input class = "input" type="email" placeholder="email address" name="email address">-->
-<!--    <button class = "input" type="submit">Subscribe</button>-->
-
-
     <form id = "input" action="Final.html" method="post" class="subscribe-form" target = "_blank">
         <label class = "sub" for="email">Enter your email:</label>
         <input class = "sub" type="email" id="email" name="email">
@@ -114,5 +95,11 @@
     <div id = "tm">
         @2014 Sunflower Coffee. All rights reserved</div>
     </div>
+        <script>
+            function myFunction() {
+                alert("Our coffee menu is temporarily broken.")
+            }
+        </script>
     </body>
+
 </html>
