@@ -1,0 +1,32 @@
+/*body {*/
+/*    width: 10%;*/
+/*    height: 100%;*/
+/*    background-position: center;*/
+/*    !*fixed changes color*!*/
+/*    !*scroll make scrollable (block) vs whole backgd?)*!*/
+/*    background-attachment:scroll;*/
+/*    background-repeat: no-repeat;*/
+/*    background-image: radial-gradient(#FFFCF9, #D19C1D, #D80032, #D80032, #F686BD, #FF99C8);*/
+/*    background-size: cover;*/
+/*    opacity: .5*/
+/*}*/
+body{
+    margin: 0 auto;
+}
+.main-cont{
+    background-position: center;
+    /*fixed changes color*/
+    /*scroll make scrollable (block) vs whole backgd?)*/
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(#FFFCF9, #D19C1D, #D80032, #D80032, #F686BD, #FF99C8);
+    background-size: cover;
+    opacity: .5;
+    position: absolute;
+    /*Fills screen, no need to specify height, & scales*/
+    top: 0;
+    bottom: 0;
+    /**/
+    width:100%;
+
+}
