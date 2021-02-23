@@ -13,16 +13,18 @@
 body{
     margin: 0 auto;
 }
+
+/*insp by multiples.js*/
 .main-cont{
     background-position: center;
     /*fixed changes color*/
     /*scroll make scrollable (block) vs whole backgd?)*/
-    background-attachment:scroll;
-    background-repeat: no-repeat;
-    background-image: radial-gradient(#FFFCF9, #D19C1D, #D80032, #D80032, #F686BD, #FF99C8);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-image: linear-gradient(#F8F9FA,#E9ECEF,#E9ECEF,#CED4DA,#ADB5BD,#6C757D,#495057,#343A40,#212529);
     background-size: cover;
     opacity: .5;
-    position: absolute;
+    position: fixed;
     /*Fills screen, no need to specify height, & scales*/
     top: 0;
     bottom: 0;
