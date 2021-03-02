@@ -2,11 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.11/paper-full.min.js" integrity="sha512-ehNJ9gpOQJn8EYlA3P1zUtfrh97G/6WNsjfPfpnMxbo6PX6UXHRj8Ny5MCd36w2eTPlvOSVuXLZmY+/VLVhI4A==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.min.css" integrity="sha512-V+r0ugxPpGraMA2ubEWvqpfcZZAfMAbnSDPeu/6gYFfdxlgJGfCuNTNrZkrjQ0sJBoySdN6uoTVwJ+4P/BeTkg==" crossorigin="anonymous" />
+
+
+<!--    two-->
+    <script src="http_cdnjs.cloudflare.com_ajax_libs_two.js_0.7.1_two.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.7.1/two.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <title>Background Thing</title>
 </head>
 <body>
 <h1>hey</h1>
 <div class = "main-cont"></div>
+
+
+<script type="text/javascript">
+    // Make an instance of two and place it on the page.
+    var elem = document.getElementById('draw-shapes');
+    var params = { width: 285, height: 200 };
+    var two = new Two(params).appendTo(elem);
+
+    // two has convenience methods to create shapes.
+    var circle = two.makeCircle(72, 100, 50);
+    var rect = two.makeRectangle(213, 100, 100, 100);
+
+    // The object returned has many stylable properties:
+    circle.fill = '#FF8000';
+    circle.stroke = 'orangered'; // Accepts all valid css color
+    circle.linewidth = 5;
+
+    rect.fill = 'rgb(0, 200, 255)';
+    rect.opacity = 0.75;
+    rect.noStroke();
+
+    // Don't forget to tell two to render everything
+    // to the screen
+    two.update();
+
+
+</script>
 </body>
 </html>
