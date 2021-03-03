@@ -29,7 +29,6 @@ function init() {
             flag = 0;
             console.log(flag);
         }
-
         else{
             ball.style.left = "50px";
             flag = 1;

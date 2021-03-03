@@ -15,8 +15,15 @@ Then the call of findMin(nums) should return -12.5 since that is the smallest nu
 <button onclick=”findmin();">Click me!</button>
 
  **/
-
+let nums = [-1, 3.2, 12, 15, -4, 1, -12.5, 1, 8];
+document.write("The list: ");
+document.write(nums);
+document.write("<br>");
 function findMin(nums){
+    let sorted = nums.sort(function(a,b){return b -a});
 
-    n.index(min(n))
+    console.log(sorted);
+    return(sorted[sorted.length-1])
 }
+document.write("The smallest item: ");
+document.write(findMin(nums));
