@@ -3,10 +3,12 @@ body{
     text-align: center;
 }
 
+/*MENU -----------------------------------------------------------------------------*/
 #menu-view{
 padding-left: 5%;
 padding-right: 5%;
 font-size: 12pt;
+display:none;
 }
 
 h2{
@@ -38,3 +40,23 @@ h2{
     border: 2px solid black;
     border-radius: .35em;
 }
+
+/*MENU -----------------------------------------------------------------------------*/
+
+
+
+/*SET -----------------------------------------------------------------------------*/
+
+/*#details{*/
+/*    background-color: black;*/
+/*}*/
+#details {
+    background-color: black;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    font-size: 14pt;
+    display:-webkit-inline-box;
+
+}
+
+/*SET -----------------------------------------------------------------------------*/
