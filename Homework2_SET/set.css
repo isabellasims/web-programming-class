@@ -1,0 +1,15 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+}
+#menu-view{
+padding-left: 5%;
+padding-right: 5%;
+}
+
+#purple-frame{
+    background-color: #636ef4;
+    border: 5px solid black;
+    padding-bottom: 1%;
+
+}

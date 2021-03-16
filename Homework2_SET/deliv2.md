@@ -1,30 +1,3 @@
-add div for img tags
-
-1)  Using CSS to code up the Main Menu View.
-
-2)  Using CSS to code up to the Game View.
-
-3)  Let user select a timing option and level of difficulty.
-
-4) The user can select the minuets and the level of difficulty.
-
-5)  When the user press “Starts”, it goes to the Game View.
-
-6) Feel free to finish as much as additional behavioral of the game as best as you can. But they are not required.
-
-7) You are required to present your partial results in class break-out rooms on March 5th.
-
-
-Deliverables:
-
-Please submit your .html, .css, .js and your image folders as a .zip file.
-
-Please name your folder as your firstname_lastname_homework2
-
- 
-
- 
-
 This assignment continues what we've been learning in Module 1 (HTML/CSS) and applies what you are learning in Module 2 (JavaScript, DOM, and Animations).
 
 As a longer assignment, it will be worth more points than HW2 and consists of two submissions. First, we will focus on CSS/HMTL for the user views.  Second, we will focus on JavaScript to shuffle the cards, let user select the cards and record the scores.
