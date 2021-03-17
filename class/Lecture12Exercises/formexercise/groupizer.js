@@ -17,6 +17,7 @@ Starter code for Groupizer page to demonstrate different types of events,
     SUBMIT.addEventListener("click", function(){
       //alert("sub clicked")
       showGroup();
+
     });
 
 
@@ -30,18 +31,21 @@ Starter code for Groupizer page to demonstrate different types of events,
     let p = document.createElement("p");
     p.innerHTML = "Now the group is formed";
     document.body.appendChild(p);
+
     for(let i = 1; i < names.length; i++){ // exclude group name from loop
+      // add pink
+      names[i].setAttribute("style","background-color: pink" );
+      // add text
       let p = document.createElement("p");
       p.innerHTML = names[i].value;
       document.body.appendChild(p);
     }
+    // add yellow
+    let groupForm = document.getElementById("group-name");
+    groupForm.setAttribute("style","background-color: yellow" );
   }
 
-  function addColor(){
-    let groupForm = document.getElementById("group-name");
-    groupForm.setAttribute("style")
-        style = {backgroundColor: yellow};
-  }
+
 
 
 
