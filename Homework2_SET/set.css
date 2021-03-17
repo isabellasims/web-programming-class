@@ -8,7 +8,7 @@ body{
 padding-left: 5%;
 padding-right: 5%;
 font-size: 12pt;
-display:none;
+/*display:none;*/
 }
 
 h2{
@@ -54,12 +54,14 @@ h2{
 #details {
     background-color: black;
     border: 2px solid black;
-    border-radius: 0.5em;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
     color:white;
     font-size: 14pt;
     display:flex;
     justify-content: space-evenly;
-    margin: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
     /*display:-webkit-inline-box;*/
 
 }
@@ -74,4 +76,31 @@ h2{
     background-color: white;
 }
 
+#game {
+    border-left: 5pt solid black;
+    border-right: 5pt solid black;
+    border-bottom: 5pt solid black;
+    padding: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin-right:5%;
+    margin-left:5%;
+
+}
+
+.card {
+    width: 220px;
+    height: 95px;
+    border: 0.35em solid black;
+    border-radius: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /*SET -----------------------------------------------------------------------------*/
+
+/*document.querySelector("#outline-oval-green-2")*/
