@@ -65,9 +65,13 @@ h2{
 }
 
 #details > button{
-    padding-top:8px;
-    padding-bottom: 8px;
+    /*doesn't make a dif*/
+    /*padding-top:8px;*/
+    /*padding-bottom: 8px;*/
     font-size: 12px;
+    margin: 1%;
+    width: 12%;
+    background-color: white;
 }
 
 /*SET -----------------------------------------------------------------------------*/
