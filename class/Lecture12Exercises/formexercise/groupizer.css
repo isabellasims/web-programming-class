@@ -37,6 +37,7 @@ form {
 label {
   margin-top: 0;
   margin-bottom: 0;
+  background-color: yellow;
 }
 
 ul {
