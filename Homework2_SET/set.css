@@ -50,13 +50,24 @@ h2{
 /*#details{*/
 /*    background-color: black;*/
 /*}*/
+
 #details {
     background-color: black;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    border: 2px solid black;
+    border-radius: 0.5em;
+    color:white;
     font-size: 14pt;
-    display:-webkit-inline-box;
+    display:flex;
+    justify-content: space-evenly;
+    margin: 5%;
+    /*display:-webkit-inline-box;*/
 
+}
+
+#details > button{
+    padding-top:8px;
+    padding-bottom: 8px;
+    font-size: 12px;
 }
 
 /*SET -----------------------------------------------------------------------------*/
