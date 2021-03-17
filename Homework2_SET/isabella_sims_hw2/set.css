@@ -47,9 +47,6 @@ h2{
 
 /*SET -----------------------------------------------------------------------------*/
 
-/*#details{*/
-/*    background-color: black;*/
-/*}*/
 
 #details {
     background-color: black;
@@ -62,12 +59,12 @@ h2{
     justify-content: space-evenly;
     margin-right: 5%;
     margin-left: 5%;
-    /*display:-webkit-inline-box;*/
+
 
 }
 
 #details > button{
-    /*doesn't make a dif*/
+    /*doesn't make a dif if i do the 8px padding or not*/
     /*padding-top:8px;*/
     /*padding-bottom: 8px;*/
     font-size: 12px;
@@ -101,6 +98,10 @@ h2{
     justify-content: space-evenly;
 }
 
+.add-shadow {
+    box-shadow: 6px 6px #636363;
+}
+
 /*SET -----------------------------------------------------------------------------*/
 
-/*document.querySelector("#outline-oval-green-2")*/
+
