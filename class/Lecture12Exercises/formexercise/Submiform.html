@@ -10,14 +10,20 @@
     <script src="groupizer.js"></script>
   </head>
   <body>
-    <header>
+
+
+
+
+
+
+  <header>
       <h1>Create Groups for the Randomizer!</h1>
     </header>
     <main>
       <form>
         <label>Group Name: <input type="text" size="40" id="group-name" /></label>
         <label>Group Size:
-          <select id="group-size">
+          <select id="group-size" autocomplete="off">
             <option>2</option>
             <option selected="selected">3</option>
             <option>4</option>
@@ -27,6 +33,7 @@
           <li>Member 1: <input type="text" size="40" /></li>
           <li>Member 2: <input type="text" size="40" /></li>
           <li>Member 3: <input type="text" size="40" /></li>
+          <li>Member 4: <input type="text" size="40" /></li>
         </ul>
       </form>
       <button id="add-btn">Submit Group!</button>
