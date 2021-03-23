@@ -23,12 +23,50 @@
 (function() {
     "use strict";
     window.onload = function() {
+
+        // let add = document.getElementById('add');
+        // add.addEventListener("click", function () {
+        //     addItem();
+        // });
         document.getElementById("add").onclick = addItem;
     };
 
     function addItem(){
-        let names = document.getElementsByTagName("input");
+
+        let item = document.getElementsByTagName("input");
+        let ul = document.getElementById("list");
+
+        // create list item and assign text box value to its inner html
+        let li = document.createElement("li");
+        li.innerHTML = item[0].value;
+
+        // add list item to ul
+        ul.appendChild(li);
+
+        // clear text box
+        item[0].value = "";
+        updateColors();
+
+
+
 // your code goes here
+    }
+    function updateColors(){
+        // get all li items
+        let fields = document.getElementsByTagName("li");
+
+        // first item not colored
+
+
+        let c =1;
+        for(let i = 0; i < fields.length; i ++){
+
+            if(c%2 === 0) {
+                fields[i].setAttribute("style", "background-color: yellow");
+            }
+            c++;
+
+        }
     }
 
 })();
