@@ -24,6 +24,8 @@
 // Compute has been clicked as well as when the Curve+5 is checked.
 
 //An example of unobtrusive JS.
+
+// link I used for math: https://sciencing.com/calculate-class-grade-7379797.html
 (function() {
     "use strict";
     window.onload = function() {
@@ -36,12 +38,30 @@
         computeButton.addEventListener("click",function(){
             //let resultsArea = document.getElementById("resultsarea");
 
+            // add new div & p for each score
             let newResult = document.createElement("div");
             let p = document.createElement("p");
             p.innerHTML = 'Pass!';
 
             newResult.appendChild(p);
             resultsDiv.append(newResult);
+
+            // get list of score elements
+            let earned = document.getElementsByClassName("earned");
+            // get text value of each score element
+            let score1 = earned[0].value;
+            let score2 = earned[1].value;
+            let score3 = earned[2].value;
+
+            // get list of max elements
+            let max = document.getElementsByClassName("max");
+            // get text value of each max element
+            let max1 = earned[0].value;
+            let max2 = earned[1].value;
+            let max3 = earned[2].value;
+
+
+
 
 
 
