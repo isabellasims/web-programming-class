@@ -25,36 +25,44 @@
 
 //An example of unobtrusive JS.
 
-// link I used for math: https://sciencing.com/calculate-class-grade-7379797.html
+// q to self: is there an advantage to using anon functions over method I used in q3?
 (function() {
     "use strict";
     window.onload = function() {
 
 
         let computeButton = document.getElementById("compute");
+        let clearButton = document.getElementById("clear");
         let resultsDiv = document.getElementById('resultsarea');
 
-        //event handlder, another anonymous function
+        // get list of score elements
+        let earned = document.getElementsByClassName("earned");
+        // get list of max elements
+        let max = document.getElementsByClassName("max");
+
+
+        clearButton.addEventListener("click",function(){
+            let earned = document.getElementsByClassName("earned");
+            for(let i = 0; i < earned.length; i++){
+                earned[i].value = "";
+                max[i].value = "";
+
+            }
+
+
+        });
         computeButton.addEventListener("click",function(){
-            //let resultsArea = document.getElementById("resultsarea");
 
             // add new div & p for each score
             let newResult = document.createElement("div");
             let p = document.createElement("p");
-            // p.innerHTML = 'Pass!';
-            //
-            // newResult.appendChild(p);
-            // resultsDiv.append(newResult);
 
-            // get list of score elements
-            let earned = document.getElementsByClassName("earned");
+
             // get text value of each score element
             let earned1 = parseInt(earned[0].value);
             let earned2 = parseInt(earned[1].value);
             let earned3 = parseInt(earned[2].value);
 
-            // get list of max elements
-            let max = document.getElementsByClassName("max");
             // get text value of each max element
             let max1 = parseInt(max[0].value);
             let max2 = parseInt(max[1].value);
