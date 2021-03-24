@@ -1,10 +1,27 @@
-/*import dancing*/
+/*import dancing script*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+/*menu bar font*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
-#big_title{
+body{
+    text-align: center;
+
+}
+.header{
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
-    text-align: center;
+    /*text-align: center;*/
     color: brown;
     padding-top: 20px;
+}
+
+#to-do-buttons{
+
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: ruby-base-container; /*display ruby-base-container and grid both look good*/
+
+    font-weight: lighter;
+}
+button{
+    font-weight: lighter;
 }
