@@ -3,15 +3,39 @@
 /*menu bar font*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
+/*font-variants
+-petite caps
+- sub & super for positioning
+*/
+
+/*notes
+- list items are at 50%.. width at 50% to center & align stuff
+*/
+
+/*color scheme
+- pale pink: #EFD0CA
+*/
+
+
 body{
     text-align: center;
+    font-synthesis: style;
+    font-family: 'Open Sans Condensed', cursive;
+    /*color:*/
+    font-variant: all-petite-caps;
+    /*background: #EFD0CA;*/
+    background: ghostwhite;
+
 
 }
 .header{
-    font-family: 'Dancing Script', cursive;
+    /*text-emphasis: dot;*/
+    /*text-emphasis-color: gold;*/
+    /*font-family: 'Open Sans Condensed', cursive;*/
     font-size: 40px;
     /*text-align: center;*/
-    color: brown;
+    /*color: brown;*/
+    color: #b5838d;
     padding-top: 20px;
 }
 
@@ -24,4 +48,13 @@ body{
 }
 button{
     font-weight: lighter;
+}
+
+
+#list{
+    /* make highlight fit size */
+    width: 50%;
+    /* move left from center */
+    text-align: start;
+    padding-left: 20%;
 }
