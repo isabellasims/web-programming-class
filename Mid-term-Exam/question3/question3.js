@@ -55,7 +55,7 @@
         ul.appendChild(li);
 
         // clear text box
-      //  console.log("item 0", item[0].value , "item 1", item[1].value);
+        //  console.log("item 0", item[0].value , "item 1", item[1].value);
         // clear text box
         console.log(item);
         item[0].value = "";
@@ -79,17 +79,17 @@
         for(let i = 0; i < items.length; i++){
             if(items[i].innerHTML === text){
                 items[i].remove();
+                break; // removes only first
 
             }
         }
         // clear text box input
         textElement[0].value = "";
-
-
-
+        updateColors();
 
 
     }
+
     function updateColors(){
         // get all li items
         let fields = document.getElementsByTagName("li");
@@ -100,6 +100,9 @@
 
             if(c%2 === 0) {
                 fields[i].setAttribute("style", "background-color: yellow");
+            }
+            else{
+                fields[i].setAttribute("style", "background-color: transparent");
             }
             c++;
 
