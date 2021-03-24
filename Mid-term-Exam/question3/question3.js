@@ -24,19 +24,14 @@
     "use strict";
     window.onload = function() {
 
-        // let add = document.getElementById('add');
-        // add.addEventListener("click", function () {
-        //     addItem();
-        // });
         let div = document.getElementsByTagName("div");
 
         let remove = document.createElement("button");
         remove.id = "remove";
         remove.innerHTML = "remove";
 
+        // add remove button
         div[0].appendChild(remove);
-
-
 
         document.getElementById("add").onclick = addItem;
         document.getElementById("remove").onclick = removeItem;
@@ -55,15 +50,9 @@
         ul.appendChild(li);
 
         // clear text box
-        //  console.log("item 0", item[0].value , "item 1", item[1].value);
-        // clear text box
         console.log(item);
         item[0].value = "";
         updateColors();
-
-
-
-// your code goes here
     }
 
 
@@ -77,24 +66,21 @@
         let text = textElement[0].value;
 
         for(let i = 0; i < items.length; i++){
-            if(items[i].innerHTML === text){
+            if(items[i].innerHTML.toLowerCase() === text.toLocaleLowerCase()){
                 items[i].remove();
                 break; // removes only first
-
             }
         }
         // clear text box input
         textElement[0].value = "";
         updateColors();
-
-
     }
 
     function updateColors(){
         // get all li items
         let fields = document.getElementsByTagName("li");
 
-        // first item not colored
+        // first item not colored so c starts at 1
         let c =1;
         for(let i = 0; i < fields.length; i ++){
 
@@ -109,28 +95,4 @@
         }
     }
 
-
-
 })();
-
-
-
-/** Writes group member names to the DOM and updates colors*/
-function submitActions(){
-    let names = document.getElementsByTagName("input");
-    let p = document.createElement("p");
-    p.innerHTML = "Now the group is formed";
-    document.body.appendChild(p);
-
-    for(let i = 1; i <= namesToDisplay; i++){ // exclude group name from loop
-        // add pink
-        names[i].setAttribute("style","background-color: pink" );
-        // add text
-        let p = document.createElement("p");
-        p.innerHTML = names[i].value;
-        document.body.appendChild(p);
-    }
-    // add yellow
-    let groupForm = document.getElementById("group-name");
-    groupForm.setAttribute("style","background-color: yellow" );
-}
