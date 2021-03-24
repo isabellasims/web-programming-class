@@ -28,7 +28,18 @@
         // add.addEventListener("click", function () {
         //     addItem();
         // });
+        let div = document.getElementsByTagName("div");
+
+        let remove = document.createElement("button");
+        remove.id = "remove";
+        remove.innerHTML = "remove";
+
+        div[0].appendChild(remove);
+
+
+
         document.getElementById("add").onclick = addItem;
+        document.getElementById("remove").onclick = removeItem;
     };
 
     function addItem(){
@@ -44,6 +55,9 @@
         ul.appendChild(li);
 
         // clear text box
+      //  console.log("item 0", item[0].value , "item 1", item[1].value);
+        // clear text box
+        console.log(item);
         item[0].value = "";
         updateColors();
 
@@ -51,13 +65,25 @@
 
 // your code goes here
     }
+
+
+    function removeItem(){
+        let items = document.getElementsByTagName("li");
+
+        // the text currently in the input box
+        let text = document.getElementsByTagName("input");
+
+        let value = items[0].value;
+
+
+
+
+    }
     function updateColors(){
         // get all li items
         let fields = document.getElementsByTagName("li");
 
         // first item not colored
-
-
         let c =1;
         for(let i = 0; i < fields.length; i ++){
 
@@ -68,6 +94,8 @@
 
         }
     }
+
+
 
 })();
 
