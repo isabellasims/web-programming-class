@@ -49,39 +49,35 @@
             // get list of score elements
             let earned = document.getElementsByClassName("earned");
             // get text value of each score element
-            let earned1 = earned[0].value;
-            let earned2 = earned[1].value;
-            let earned3 = earned[2].value;
+            let earned1 = parseInt(earned[0].value);
+            let earned2 = parseInt(earned[1].value);
+            let earned3 = parseInt(earned[2].value);
 
             // get list of max elements
             let max = document.getElementsByClassName("max");
             // get text value of each max element
-            let max1 = max[0].value;
-            let max2 = max[1].value;
-            let max3 = max[2].value;
+            let max1 = parseInt(max[0].value);
+            let max2 = parseInt(max[1].value);
+            let max3 = parseInt(max[2].value);
 
-            // calc all 3 weighted scores
-            let score1 = earned1/max1;
-            let score2 = earned2/max2;
-            let score3 = earned3/max3;
-
+            // calc final score
             let final = ((earned1 + earned2 + earned3)/(max1 + max2 + max3))*100;
 
+            // add 5 if curve
+            if(document.getElementById("curve").checked === true){
+                final +=5;
+            }
+
+            // highlight green if pass
+            if(final >= 60){
+                p.className = "pass";
+            }
+
+            // add result to DOM
             p.innerHTML = final;
 
             newResult.appendChild(p);
             resultsDiv.append(newResult);
-
-            console.log(earned1/max1);
-
-
-
-
-
-
-
-
-
 
 
         })
