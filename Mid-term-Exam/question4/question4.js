@@ -22,3 +22,34 @@
 //
 // The current screen shots show the initial state after scores have been entered and
 // Compute has been clicked as well as when the Curve+5 is checked.
+
+//An example of unobtrusive JS.
+(function() {
+    "use strict";
+    window.onload = function() {
+
+
+        let computeButton = document.getElementById("compute");
+        let resultsDiv = document.getElementById('resultsarea');
+
+        //event handlder, another anonymous function
+        computeButton.addEventListener("click",function(){
+            //let resultsArea = document.getElementById("resultsarea");
+
+            let newResult = document.createElement("div");
+            let p = document.createElement("p");
+            p.innerHTML = 'Pass!';
+
+            newResult.appendChild(p);
+            resultsDiv.append(newResult);
+
+
+
+
+
+        })
+
+
+
+    };
+})();
