@@ -70,10 +70,21 @@
     function removeItem(){
         let items = document.getElementsByTagName("li");
 
-        // the text currently in the input box
-        let text = document.getElementsByTagName("input");
+        // the element of the text currently in the input box
+        let textElement = document.getElementsByTagName("input");
 
-        let value = items[0].value;
+        // the text to remove
+        let text = textElement[0].value;
+
+        for(let i = 0; i < items.length; i++){
+            if(items[i].innerHTML === text){
+                items[i].remove();
+
+            }
+        }
+        // clear text box input
+        textElement[0].value = "";
+
 
 
 
