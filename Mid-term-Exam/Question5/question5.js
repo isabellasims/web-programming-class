@@ -17,26 +17,25 @@
         totalText.innerHTML = "total " + total ;
         return total;
 
-// your code goes here
     }
     function updateTwo(){
         total +=2;
         totalText.innerHTML = "total " + total ;
         return total;
-// your code goes here
+
     }
     function updateTen(){
         total +=10;
         totalText.innerHTML = "total " + total ;
         return total;
-// your code goes here
+
     }
 
     function updateFive(){
         total +=5;
         totalText.innerHTML = "total " + total ;
         return total;
-// your code goes here
+
     }
 
 })();
