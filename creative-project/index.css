@@ -26,6 +26,22 @@ body{
     /*background: #EFD0CA;*/
     background: ghostwhite;
 
+    border: 0.2em solid black;
+    border-radius: 15px;
+    width:70%;
+    margin: 0 auto;
+
+
+
+
+
+}
+
+#to-do-container{
+    border: 0.2em solid black;
+    border-radius: 15px;
+    width:70%;
+    margin: 0 auto;
 
 }
 .header{
