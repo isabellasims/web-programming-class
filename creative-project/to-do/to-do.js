@@ -58,12 +58,16 @@
         // get all li items
         let fields = document.getElementsByTagName("li");
 
+
         // first item not colored so c starts at 1
         let c =1;
         for(let i = 0; i < fields.length; i ++){
 
+            fields[i].setAttribute("style", "font-size: 25px");
+
             if(c%2 === 0) {
                 fields[i].setAttribute("style", "background-color: yellow");
+
             }
             else{
                 fields[i].setAttribute("style", "background-color: transparent");
