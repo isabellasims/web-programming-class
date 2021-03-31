@@ -3,12 +3,16 @@ body{
     text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
 /*MENU -----------------------------------------------------------------------------*/
 #menu-view{
 padding-left: 5%;
 padding-right: 5%;
 font-size: 12pt;
-/*display:none;*/
+
 }
 
 h2{
@@ -26,6 +30,7 @@ h2{
 #easy-standard{
    text-decoration: none;
 }
+
 #start{
     width:100px;
     margin-top: 10px;

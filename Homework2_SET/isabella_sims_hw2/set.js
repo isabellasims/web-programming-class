@@ -1,6 +1,31 @@
 window.onload = function() {
+
+     //init();
      // 3 options for everything. same idea as randomly generating num 1-3
      const COUNTS = [1, 2, 3];
+     let START = document.getElementById("start");
+
+
+
+    START.addEventListener("click", function(){
+        let MENU_VIEW = document.getElementById("menu-view");
+        MENU_VIEW.setAttribute('style',"display:none")
+       // MENU_VIEW.classList.add("hidden");
+        console.log("clicked");
+    });
+
+
+     // let refreshBtn = document.getElementById("refresh");
+     // let backBtn = document.getElementById("main-btn");
+     //
+     // refreshBtn.addEventListener("click", refreshGame);
+     // backBtn.addEventListener("click", backToMenu);
+
+
+    // function init(){
+    //     const MENU_VIEW = document.getElementById("menu-view");
+    //     MENU_VIEW.classList.add("hidden");
+    // }
 
     // easy = 9
     // standard = 12
@@ -10,6 +35,15 @@ window.onload = function() {
         const COLORS = ["purple", "green", "red"];
         const FILLS = ["outline", "solid", "striped"];
         const SHAPES = ["diamond", "squiggle", "oval"];
+
+
+
+        // let refreshBtn = document.getElementById("refresh");
+        // let backBtn = document.getElementById("main-btn");
+        // startBtn.addEventListener("click", startGame);
+        // refreshBtn.addEventListener("click", refreshGame);
+        // backBtn.addEventListener("click", backToMenu);
+
 
         let gameBoard = document.getElementById("game");
         for (let i = 0; i < numCards; i++) {
