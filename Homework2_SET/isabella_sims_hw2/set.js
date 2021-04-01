@@ -10,6 +10,7 @@ window.onload = function() {
     const COUNTS = [1, 2, 3];
     // initialize minutes to 0
     let mins = 0;
+    let setCount = 0;
     // init time selector
     let timeSel;
     // buttons
@@ -166,6 +167,7 @@ window.onload = function() {
 
 
 
+
         // let timeSel = document.querySelector("select");
         //
         // let val = timeSel.options[timeSel.selectedIndex].value;
@@ -207,6 +209,7 @@ window.onload = function() {
         let FILLS = ["outline", "solid", "striped"];
         const SHAPES = ["diamond", "squiggle", "oval"];
 
+
         // if (difficulty === "easy"){
         //     FILLS = ["solid"]
         // }
@@ -216,6 +219,9 @@ window.onload = function() {
         for (let i = 0; i < numCards; i++) {
 
             let card = document.createElement("div");
+            card.addEventListener("click",selected);
+
+
 
             if (difficulty === "easy") {
                 FILLS = ["solid"]
@@ -237,13 +243,15 @@ window.onload = function() {
             card.id = fill + "-" + shape + "-" + color + "-" + numShapes;
             card.classList.add("card");
 
-            // add shadow class and toggle
-            card.classList.add("add-shadow");
-            card.classList.toggle("add-shadow");
-            card.onclick = function () {
-                card.classList.toggle("add-shadow");
+            // // add shadow class and toggle
+            // card.classList.add("add-shadow");
+            // card.classList.toggle("add-shadow");
+            // card.onclick = function () {
+            //     card.classList.toggle("add-shadow");
+            //
+            // };
 
-            };
+
 
             // generate cards until dup, then gen one card until no dup
             if (!document.getElementById(fill + "-" + shape + "-" + color + "-" + numShapes)) {
@@ -260,10 +268,117 @@ window.onload = function() {
             else{
                 dupFlag();
             }
+
         }
 
+        // let selectedCard = document.getElementsByClassName("add-shadow");
+        //
+        // selectedCard.addEventListener("click",function(){
+        //     if (checkCorrect(selectedCard)) {
+        //         let count = document.getElementById("set-count");
+        //         setCount++;
+        //         count.innerText = "" + setCount;
+        //
+        //         for (let i = 0; i < selectedCard.length; i++) {
+        //             showCorrect(selectedCard[i]);
+        //         }
+        //     }
+        // });
+
+
+
     }
+
+    function selected() {
+        this.classList.toggle("add-shadow");
+        let selectedCard = document.getElementsByClassName("add-shadow");
+
+        if (selectedCard.length === 3) {
+            console.log(selectedCard.length);
+            if (checkCorrect(selectedCard)) {
+                let count = document.getElementById("set-count");
+                setCount++;
+                count.innerText = "" + setCount;
+
+                for (let i = 0; i < selectedCard.length; i++) {
+                    showCorrect(selectedCard[i]);
+                }
+            } else {
+                for (let i = 0; i < selectedCard.length; i++) {
+                    notPartOfSet(selectedCard[i]);
+                }
+            }
+        }
+    }
+
+
+    function checkCorrect(card) {
+        // remove "-"
+        let card1 = card[0].id.split("-");
+        let card2 = card[1].id.split("-");
+        let card3 = card[2].id.split("-");
+        let cards = [card1, card2, card3];
+        console.log(cards);
+        let correct = true;
+
+        // check for incorrect conditions
+        for (let i = 0; i < cards[0].length; i++) {
+            if (!(cards[0][i] === cards[1][i] && cards[0][i] === cards[2][i]) &&
+                !(cards[0][i] !== cards[1][i] && cards[1][i] !== cards[2][i] &&
+                    cards[0][i] !== cards[2][i])) {
+                correct = false;
+            }
+        }
+
+        // if not ^, correct is true
+        return correct;
+    }
+
+    // show user that cards are correct and display update
+    function showCorrect(card) {
+        // remove correct cards
+        while (card.hasChildNodes()) {
+            card.removeChild(card.lastChild);
+        }
+
+        card.innerText = "SET!";
+
+        setTimeout(function() {
+            card.innerText = "";
+            card.classList.toggle("add-shadow");
+            let tempCard = card;
+
+            while (tempCard.hasChildNodes()) {
+                card.appendChild(tempCard.removeChild(tempCard.lastChild));
+            }
+
+            card.id = tempCard.id;
+        }, 1000);
+    }
+
+    function notPartOfSet(card) {
+        let tempContainer = [];
+        let i = 0;
+
+        while (card.hasChildNodes()) {
+            tempContainer[i] = card.removeChild(card.lastChild);
+            i++;
+        }
+
+        card.innerText = "Not a Set :(";
+
+        setTimeout(function() {
+            card.innerText = "";
+            card.classList.toggle("add-shadow");
+
+            for (let j = 0; j < tempContainer.length; j++) {
+                card.appendChild(tempContainer[i]);
+            }
+        }, 1000);
+    }
+
+
   //  makeCards2(12);
 
 
-};
+}
