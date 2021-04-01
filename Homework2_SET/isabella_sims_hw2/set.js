@@ -63,8 +63,13 @@ window.onload = function() {
         timeSel = document.querySelector("select");
         let val = timeSel.options[timeSel.selectedIndex].value;
         let sec = parseInt(val);
+        sec = 10;
+
+        let minCount = 0;
+
 
         function dec() {
+
 
 
             // timeSel = document.querySelector("select");
@@ -77,23 +82,59 @@ window.onload = function() {
             // let val = timeSel.options[timeSel.selectedIndex].value;
 
             if (val === "60") {
-                mins = 1;
+                mins = 0;
+                // if (sec <= 0){
+                //     mins -=1
+                // }
+                // sec = 0;
 
                 // let counter = document.getElementById("time");
-                counter.innerText = String(mins) + ":" + (sec < 10 ? "0" : "") + String(sec);
-                setTimeout(dec, 1000);
+
+
 
 
             } else if (val === "180") {
-                mins = 3;
+                mins = 2;
+                // mins = mins - minCount;
+                // if (sec <= 0){
+                //     minCount ++;
+                //     mins -=minCount;
+                //     sec = 10;
+                // }
+                // else{
+                //     mins = mins - minCount;
+                // }
+                // counter.innerText = String(mins) + ":" + (sec < 10 ? "0" : "") + String(sec);
+                // setTimeout(dec, 1000);
             } else if (val === "300") {
-                mins = 5;
+                mins = 4;
             } else {
                 // 0 means infinite
                 mins = 0;
                 countUp();
 
             }
+            // mins = mins - minCount;
+            if (sec === 0){
+                minCount ++;
+               // mins -=minCount;
+                sec = 10;
+            }
+
+            mins = mins - minCount;
+            // if(mins === 0 && sec <= 1){
+            //     alert("game over")
+            // }
+            // if (sec <= 0){
+            //     mins -=1;
+            //     sec = 60;
+            // }
+            counter.innerText = String(mins) + ":" + (sec < 10 ? "0" : "") + String(sec);
+            if(mins === 0 && sec <=1){
+                alert("game over")
+            }
+
+            setTimeout(dec, 1000);
             console.log(sec);
             console.log(mins);
 
