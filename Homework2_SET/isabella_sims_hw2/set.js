@@ -16,6 +16,7 @@ window.onload = function() {
     // buttons
     const START = document.getElementById("start");
     const BACK = document.getElementById("main-btn");
+    const REFRESH = document.getElementById("refresh");
 
 
 
@@ -39,6 +40,12 @@ window.onload = function() {
      //   startGame();
       //  let val = timeSel.options[selector.selectedIndex].value;
     });
+
+    // REFRESH.addEventListener("click", function(){
+    //     //refreshGame();
+    //     getTime();
+    //     makeCards2();
+    // });
 
     BACK.addEventListener("click", function(){
         MENU_VIEW.setAttribute('style',"display:inherit");
@@ -87,8 +94,13 @@ window.onload = function() {
                 alert("game over");
                 endGame();
             }
+            else{
+                setTimeout(dec, 1000);
+            }
 
-            setTimeout(dec, 1000);
+
+
+           // setTimeout(dec, 1000);
             console.log(sec);
             console.log(mins);
 
@@ -107,16 +119,12 @@ window.onload = function() {
                 // i ++;
             }, 1000);
         }
-        else{
+        else {
             dec();
         }
     }
 
-    function refreshGame() {
-        let gameBoard = document.getElementById("game");
-        gameBoard.innerHTML = "";
-        //makeCards2(12);
-    }
+
     function endGame() {
         let refreshBtn = document.getElementById("refresh");
         refreshBtn.removeEventListener("click", refreshGame);
@@ -305,7 +313,8 @@ window.onload = function() {
                 }
             } else {
                 for (let i = 0; i < selectedCard.length; i++) {
-                    notPartOfSet(selectedCard[i]);
+                    showWrong(selectedCard[i]);
+
                 }
             }
         }
@@ -356,11 +365,13 @@ window.onload = function() {
         }, 1000);
     }
 
-    function notPartOfSet(card) {
+    // show not a set if not a set
+    function showWrong(card) {
         let tempContainer = [];
         let i = 0;
 
         while (card.hasChildNodes()) {
+            // remove clicked cards
             tempContainer[i] = card.removeChild(card.lastChild);
             i++;
         }
@@ -371,8 +382,10 @@ window.onload = function() {
             card.innerText = "";
             card.classList.toggle("add-shadow");
 
+            // add clicked cards back
             for (let j = 0; j < tempContainer.length; j++) {
-                card.appendChild(tempContainer[i]);
+                card.appendChild(tempContainer[j]);
+
             }
         }, 1000);
     }
