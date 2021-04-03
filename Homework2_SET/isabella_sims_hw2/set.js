@@ -1,5 +1,3 @@
-
-
 window.onload = function() {
 
     // globals
@@ -7,8 +5,7 @@ window.onload = function() {
     const MENU_VIEW = document.getElementById("menu-view");
     const GAME_VIEW= document.getElementById("game-view");
 
-    // time selector HTML
-    // let timeSel = document.querySelector("select");
+
     // 3 options for everything. same idea as randomly generating num 1-3
     const COUNTS = [1, 2, 3];
     // initialize minutes to 0
@@ -16,7 +13,7 @@ window.onload = function() {
     let sec = 0;
     let setCount = 0;
     // init time selector
-    let timeSel;
+
     // buttons
     const START = document.getElementById("start");
     const BACK = document.getElementById("main-btn");
@@ -39,16 +36,12 @@ window.onload = function() {
     });
 
 
-    // clearTimeout(countdown);
-    // clearInterval(countUp);
+
     BACK.addEventListener("click", function(){
         // let gameBoard = document.getElementById("game");
          MENU_VIEW.setAttribute('style',"display:inherit");
          GAME_VIEW.setAttribute('style',"display:none");
-
         let gameBoard = document.getElementById("game");
-       // MENU_VIEW.classList.remove("hidden");
-       // GAME_VIEW.classList.add("hidden");
         gameBoard.innerHTML = "";
         clearTimeout(countdown);
         clearInterval(countUp);
@@ -56,8 +49,8 @@ window.onload = function() {
 
 
     function startGame(){
-        clearTimeout(countdown);
-        clearInterval(countUp);
+        // clearTimeout(countdown);
+        // clearInterval(countUp);
          let selector = document.querySelector("select");
 
         min = getOptions(selector);
@@ -77,8 +70,6 @@ window.onload = function() {
         }
     }
 
-
-
     // generate one card if there is a duplicate
     function dupFlag() {
         let input = document.querySelector("input[name='diff']:checked").value;
@@ -96,13 +87,9 @@ window.onload = function() {
     // just gonna go with standard for the first deliverable I guess?
     // creates a random shape once then adds that shape to a card numShapes times
     function makeCards2(numCards,difficulty) {
-        clearTimeout(countdown);
-        clearInterval(countUp);
         const COLORS = ["purple", "green", "red"];
         let FILLS = ["outline", "solid", "striped"];
         const SHAPES = ["diamond", "squiggle", "oval"];
-
-
 
         let gameBoard = document.getElementById("game");
         for (let i = 0; i < numCards; i++) {
@@ -110,8 +97,7 @@ window.onload = function() {
             let card = document.createElement("div");
             card.addEventListener("click",selected);
 
-
-
+            // fills only solid for easy mode
             if (difficulty === "easy") {
                 FILLS = ["solid"]
             }
@@ -121,8 +107,6 @@ window.onload = function() {
             let numShapes = COUNTS[Math.floor(Math.random() * COUNTS.length)];
             let shape = SHAPES[Math.floor(Math.random() * SHAPES.length)];
             let color = COLORS[Math.floor(Math.random() * COLORS.length)];
-
-
 
             // add the CSS to the cards
             card.id = fill + "-" + shape + "-" + color + "-" + numShapes;
@@ -197,9 +181,13 @@ window.onload = function() {
 
     // show user that cards are correct and display update
     function showCorrect(card) {
-        // remove correct cards
+        let temp = [];
+        let i = 0;
+
         while (card.hasChildNodes()) {
-            card.removeChild(card.lastChild);
+            // remove clicked cards
+            temp[i] = card.removeChild(card.lastChild);
+            i++;
         }
 
         card.innerText = "SET!";
@@ -207,24 +195,23 @@ window.onload = function() {
         setTimeout(function() {
             card.innerText = "";
             card.classList.toggle("add-shadow");
-            let tempCard = card;
 
-            while (tempCard.hasChildNodes()) {
-                card.appendChild(tempCard.removeChild(tempCard.lastChild));
+            // add clicked cards back
+            for (let j = 0; j < temp.length; j++) {
+                card.appendChild(temp[j]);
+
             }
-
-            card.id = tempCard.id;
         }, 1000);
     }
 
     // show not a set if not a set
     function showWrong(card) {
-        let tempContainer = [];
+        let temp = [];
         let i = 0;
 
         while (card.hasChildNodes()) {
             // remove clicked cards
-            tempContainer[i] = card.removeChild(card.lastChild);
+            temp[i] = card.removeChild(card.lastChild);
             i++;
         }
 
@@ -235,8 +222,8 @@ window.onload = function() {
             card.classList.toggle("add-shadow");
 
             // add clicked cards back
-            for (let j = 0; j < tempContainer.length; j++) {
-                card.appendChild(tempContainer[j]);
+            for (let j = 0; j < temp.length; j++) {
+                card.appendChild(temp[j]);
 
             }
         }, 1000);
@@ -246,21 +233,27 @@ window.onload = function() {
         let refreshBtn = document.getElementById("refresh");
         refreshBtn.removeEventListener("click", refreshGame);
         let cards = document.getElementsByClassName("card");
-        cards.removeEventListener("click", selectCard);
+        cards.removeEventListener("click", selected);
     }
 
     function refreshGame() {
-        clearTimeout(countdown);
-        clearInterval(countUp);
+
         let gameBoard = document.getElementById("game");
         gameBoard.innerHTML = "";
         startGame();
+    }
+
+    function resetClock(){
+        clearTimeout(countdown);
+        clearInterval(countUp);
+
     }
 
 
 
     //  makeCards2(12);
 
+    // timer solution courtesy of stack overflow & github but still broken
     function getOptions(selector) {
         let val = selector.options[selector.selectedIndex].value;
 
@@ -280,7 +273,7 @@ window.onload = function() {
 
 
     function countdown(min, sec) {
-        // timer solution courtesy of stack overflow
+
         function incriment() {
             let counter = document.getElementById("time");
             counter.innerText = String(min) + ":" + (sec < 10 ? "0" : "") + String(sec);
