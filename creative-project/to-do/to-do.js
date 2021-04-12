@@ -16,6 +16,23 @@
 
         // document.getElementsByClassName("add").onclick = addItem;
         document.getElementById("remove").onclick = removeItem;
+
+
+        let radio_btns = document.querySelectorAll('input[type="radio"]');
+        radio_btns[0].onclick = function(){
+            document.querySelector("body").setAttribute("style", "background-color: ghostwhite")
+        };
+        radio_btns[1].onclick = function(){
+            document.querySelector("body").setAttribute("style", "background-color: pink")
+        };
+        radio_btns[2].onclick = function(){
+            document.querySelector("body").setAttribute("style", "background-color: #add8e6")
+        };
+
+       // if(radio_btns[1].checked === true){
+        //     document.querySelector("body").setAttribute("style", "background-color: yellow")
+        // }
+
     };
 
     function addItem(){
@@ -25,14 +42,14 @@
 
         // create list item and assign text box value to its inner html
         let li = document.createElement("li");
-        li.innerHTML = item[0].value;
+        li.innerHTML = item[3].value;
 
         // add list item to ul
         ul.appendChild(li);
 
         // clear text box
         console.log(item);
-        item[0].value = "";
+        item[3].value = "";
         updateColors();
     }
 
@@ -44,26 +61,27 @@
 
         // create list item and assign text box value to its inner html
         let li = document.createElement("li");
-        li.innerHTML = item[1].value;
+        li.innerHTML = item[4].value;
 
         // add list item to ul
         ul.appendChild(li);
 
         // clear text box
         console.log(item);
-        item[0].value = "";
-       // updateColors();
+        item[4].value = "";
+        updateColors();
     }
 
 
     function removeItem(){
         let items = document.getElementsByTagName("li");
+        // let items = document.getElementsByTagName("item");
 
         // the element of the text currently in the input box
         let textElement = document.getElementsByTagName("input");
 
         // the text to remove
-        let text = textElement[0].value;
+        let text = textElement[3].value;
 
         for(let i = 0; i < items.length; i++){
             if(items[i].innerHTML.toLowerCase() === text.toLocaleLowerCase()){
@@ -72,8 +90,8 @@
             }
         }
         // clear text box input
-        textElement[0].value = "";
-        updateColors();
+        textElement[3].value = "";
+      //  updateColors();
     }
 
     function updateColors(){

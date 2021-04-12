@@ -1,0 +1,105 @@
+/*import dancing script*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+/*menu bar font*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+/*font-variants
+-petite caps
+- sub & super for positioning
+*/
+
+/*notes
+- list items are at 50%.. width at 50% to center & align stuff
+*/
+
+/*color scheme
+- pale pink: #EFD0CA
+*/
+
+
+body{
+    text-align: center;
+    font-synthesis: style;
+    font-family: 'Open Sans Condensed', cursive;
+    /*color:*/
+    font-variant: all-petite-caps;
+    /*background: #EFD0CA;*/
+    background: ghostwhite;
+
+    /*border: 0.2em solid black;*/
+    /*border-radius: 15px;*/
+    /*width:80%;*/
+    margin: 0 auto;
+
+
+
+
+
+}
+
+#goals-container{
+    display: inline-block;
+    width: 35%;
+    padding-left: 10%;
+}
+
+#to-do-container2{
+    display: inline-block;
+    width: 35%;
+    /*border: 0.2em solid black;*/
+    /*border-radius: 15px;*/
+    /*width:70%;*/
+    /*margin: 0 auto;*/
+
+}
+
+/*#to-do-container{*/
+/*    border: 0.2em solid black;*/
+/*    border-radius: 15px;*/
+/*    width:70%;*/
+/*    margin: 0 auto;*/
+
+/*}*/
+.header{
+    /*text-emphasis: dot;*/
+    /*text-emphasis-color: gold;*/
+    /*font-family: 'Open Sans Condensed', cursive;*/
+    font-size: 40px;
+    /*text-align: center;*/
+    /*color: brown;*/
+    color: #b5838d;
+    padding-top: 20px;
+}
+
+#to-do-buttons{
+
+    font-family: 'Open Sans Condensed', sans-serif;
+    /*display: ruby-base-container; !*display ruby-base-container and grid both look good*!*/
+    display:inherit;
+    font-weight: lighter;
+
+}
+button{
+    font-weight: lighter;
+}
+
+
+.list{
+    /* make highlight fit size */
+    width: 100%;
+    /* move left from center */
+    text-align: start;
+    /*padding-left: 20%;*/
+    font-size: 25px;
+    /* don't force rewards to new line this way*/
+    display:table-caption;
+}
+
+
+/*#list-containers{*/
+/*    width:80%;*/
+/*}*/
+
+fieldset{
+    display:inline-flex;
+}

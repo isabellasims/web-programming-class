@@ -29,32 +29,39 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="to-do.js"></script>
-    <link rel="stylesheet" type="text/css" href="../index.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 
 <body>
+<fieldset>
+    <legend>Select Theme</legend>
+    <input type="radio" name="theme" value="white">White<br>
+    <input type="radio" name="theme" value="pink">Pink<br>
+    <input type="radio" name="theme" value="blue">Blue<br>
 
-<div id = "to-do-container2">
-    <h1 id = "to-do-h1" class = "header"> To-do </h1>
-    <div id = "to-do-buttons">
-        <input type="text" id="item" />
-        <button id="add" class = "add">add</button>
-        <button id="remove" class = "remove">remove</button>
+
+</fieldset>
+
+<div id = "list-containers">
+    <div id = "to-do-container2">
+        <h1 id = "to-do-h1" class = "header"> To-do </h1>
+        <div id = "to-do-buttons">
+            <input type="text" id="item" />
+            <button id="add" class = "add">add</button>
+            <button id="remove" class = "remove">remove</button>
+        </div>
+        <ul id="list" class = "list"></ul>
     </div>
-    <ul id="list" class = "list"></ul>
-</div>
 
-<div id = "goals-container">
-    <h1 id = "rewards-h1" class = "header"> Rewards </h1>
-    <div id = "rewards-buttons">
-        <input type="text" id="goal-item" />
-        <button id="rewards-add" class = "add">add</button>
+    <div id = "goals-container">
+        <h1 id = "rewards-h1" class = "header"> Rewards </h1>
+        <div id = "rewards-buttons">
+            <input type="text" id="goal-item" />
+            <button id="rewards-add" class = "add">add</button>
+        </div>
+        <ul id="goal-list" class = "list"></ul>
     </div>
-    <ul id="goal-list" class = "list"></ul>
 </div>
-
-
-<!--<ul id="list"></ul>-->
 
 
 </body>
