@@ -240,6 +240,7 @@ window.onload = function() {
 
         let gameBoard = document.getElementById("game");
         gameBoard.innerHTML = "";
+        resetClock();
         startGame();
     }
 
