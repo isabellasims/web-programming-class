@@ -12,6 +12,9 @@
         div[0].appendChild(remove);
 
         document.getElementById("add").onclick = addItem;
+        document.getElementById("goals-add").onclick = addItem;
+
+        // document.getElementsByClassName("add").onclick = addItem;
         document.getElementById("remove").onclick = removeItem;
     };
 

@@ -11,6 +11,8 @@
         // add remove button
         div[0].appendChild(remove);
 
+        document.getElementById("rewards-add").onclick = addItem;
+
         document.getElementById("add").onclick = addItem;
         document.getElementById("remove").onclick = removeItem;
     };
