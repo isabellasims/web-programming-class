@@ -2,17 +2,17 @@
     "use strict";
     window.onload = function() {
 
-        let div = document.getElementsByTagName("div");
+        // let div = document.getElementsByTagName("div");
 
-        let remove = document.createElement("button");
-        remove.id = "remove";
-        remove.innerHTML = "remove";
-
-        // add remove button
-        div[0].appendChild(remove);
+        // let remove = document.createElement("button");
+        // remove.id = "remove";
+        // remove.innerHTML = "remove";
+        //
+        // // add remove button
+        // div[0].appendChild(remove);
 
         document.getElementById("add").onclick = addItem;
-        document.getElementById("goals-add").onclick = addItem;
+        document.getElementById("rewards-add").onclick = addItemGoals;
 
         // document.getElementsByClassName("add").onclick = addItem;
         document.getElementById("remove").onclick = removeItem;
@@ -34,6 +34,25 @@
         console.log(item);
         item[0].value = "";
         updateColors();
+    }
+
+    function addItemGoals(){
+
+        // let item = document.getElementById("goal-item");
+        let item = document.getElementsByTagName("input");
+        let ul = document.getElementById("goal-list");
+
+        // create list item and assign text box value to its inner html
+        let li = document.createElement("li");
+        li.innerHTML = item[1].value;
+
+        // add list item to ul
+        ul.appendChild(li);
+
+        // clear text box
+        console.log(item);
+        item[0].value = "";
+       // updateColors();
     }
 
 

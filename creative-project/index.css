@@ -84,13 +84,15 @@ button{
 }
 
 
-#list{
+.list{
     /* make highlight fit size */
-    width: 50%;
+    width: 100%;
     /* move left from center */
     text-align: start;
     /*padding-left: 20%;*/
     font-size: 25px;
+    /* don't force rewards to new line this way*/
+    display:table-caption;
 }
 
 
