@@ -46,12 +46,6 @@
       }, 1000);
 
     flag ++;
-
-
-
-
-
-
   }
 
   // Part 3: Implement reset: Clear the text, output, and timer.
