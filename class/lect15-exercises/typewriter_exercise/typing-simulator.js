@@ -8,7 +8,7 @@
 (function() {
   window.addEventListener("load", init);
 
-   // let text;
+    let flag = 1;
    // let output;
 
 
@@ -17,27 +17,12 @@
     // output = document.getElementById("output");
 
     // id("animate-btn").addEventListener("click", animateText);
-    id("animate-btn").addEventListener("click", function(){
-      // let text = document.querySelector("input").value;
-      let output = document.getElementById("output");
-      let ind = 0;
-   //   if(ind < text.length){
-        window.setInterval(function () {
-          let text = document.querySelector("input").value;
+    id("animate-btn").addEventListener("click",animateText);
 
-
-            if(text[ind]) {
-              console.log(ind, text.length);
-              output.innerHTML += text[ind];
-              ind++;
-            }
-
-
-        }, 1000);
 
    //   }
 
-    });
+
     id("reset-btn").addEventListener("click", reset);
   }
 
@@ -45,32 +30,40 @@
    * Toggles typing animation - if animation is already in progress,
    * pauses it. Otherwise, starts animation.
    */
+  let ind = 0;
   function animateText() {
-    // Part 1: Implement start feature: Add the character at index 0 to output,
-    // and at each tick update index and keep adding the next character
-
-    // text = document.querySelector("input").value;
-    // Will execute myCallback every 0.5 seconds
-
-    console.log("started");
-    let text = document.querySelector("input").value;
+    //flag = 0;
     let output = document.getElementById("output");
+    // let ind = 0;
 
-    let ind = 0;
-    // if(ind < text.length) {
+
+    // if(flag %2 === 0) {
       window.setInterval(function () {
-        console.log(ind, text.length);
-        while(ind < text.length) {
-          output.innerHTML += text[ind];
-          ind++;
+        // text has to be here so that every time timer ticks it picks up on new input
+        let text = document.querySelector("input").value;
+
+        if (text[ind] && flag %2 === 0) {
+          // console.log(ind, text.length);
+          // output.innerHTML += text[ind];
+
+            // ind++;
+            console.log(ind, text.length);
+            output.innerHTML += text[ind];
+            ind++;
+          }
+        else{
+          clearInterval();
         }
 
+
+
+
       }, 1000);
+   // }
 
-  //  }
+    flag ++;
+    console.log(flag);
 
-
-    // ind ++;
 
 
 
