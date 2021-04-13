@@ -8,7 +8,13 @@
 (function() {
   window.addEventListener("load", init);
 
+   // let text;
+   // let output;
+
   function init() {
+    // text = document.querySelector("input").value;
+    // output = document.getElementById("output");
+
     id("animate-btn").addEventListener("click", animateText);
     id("reset-btn").addEventListener("click", reset);
   }
@@ -20,6 +26,26 @@
   function animateText() {
     // Part 1: Implement start feature: Add the character at index 0 to output,
     // and at each tick update index and keep adding the next character
+
+    // text = document.querySelector("input").value;
+    // Will execute myCallback every 0.5 seconds
+
+    let text = document.querySelector("input").value;
+    let output = document.getElementById("output");
+    let ind = 0;
+
+    window.setInterval(function(){
+
+        output.innerHTML += text[ind];
+        ind ++;
+
+
+
+    }, 1000);
+
+    // ind ++;
+
+
 
     // Part 2: Change Start to start/stop - what should happen
     // when we pause animation? Restart at index 0 or keep the current index?
