@@ -11,11 +11,33 @@
    // let text;
    // let output;
 
+
   function init() {
     // text = document.querySelector("input").value;
     // output = document.getElementById("output");
 
-    id("animate-btn").addEventListener("click", animateText);
+    // id("animate-btn").addEventListener("click", animateText);
+    id("animate-btn").addEventListener("click", function(){
+      // let text = document.querySelector("input").value;
+      let output = document.getElementById("output");
+      let ind = 0;
+   //   if(ind < text.length){
+        window.setInterval(function () {
+          let text = document.querySelector("input").value;
+
+
+            if(text[ind]) {
+              console.log(ind, text.length);
+              output.innerHTML += text[ind];
+              ind++;
+            }
+
+
+        }, 1000);
+
+   //   }
+
+    });
     id("reset-btn").addEventListener("click", reset);
   }
 
@@ -30,18 +52,23 @@
     // text = document.querySelector("input").value;
     // Will execute myCallback every 0.5 seconds
 
+    console.log("started");
     let text = document.querySelector("input").value;
     let output = document.getElementById("output");
+
     let ind = 0;
+    // if(ind < text.length) {
+      window.setInterval(function () {
+        console.log(ind, text.length);
+        while(ind < text.length) {
+          output.innerHTML += text[ind];
+          ind++;
+        }
 
-    window.setInterval(function(){
+      }, 1000);
 
-        output.innerHTML += text[ind];
-        ind ++;
+  //  }
 
-
-
-    }, 1000);
 
     // ind ++;
 
