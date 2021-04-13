@@ -3,7 +3,7 @@
 //   - rectangles randomly are colored when the color button is clicked
 //   - when the select is changed the number of rectangles changes to match it
 
-// in the next class we will make the move function work 
+// in the next class we will make the move function work
 
 // here is a road map of the functions you need to implement.
 
@@ -26,10 +26,27 @@
 	};
 
 	// creates the number of rectangles specified in the select.
-	function createRectangles() { 
+	function createRectangles() {
 		document.getElementById("rectanglearea").innerHTML = "";
+		let ar = document.getElementById("rectanglearea");
 		var count = document.getElementById("count").value;
+
+
 		// finish the functions here
+		for(let i = 0; i < count; i++){
+			let rect2 = document.createElement("new_rect");
+			rect2.classList = "rectangle";
+			ar.appendChild(rect2);
+
+
+		}
+		// let rect2 = document.createElement("new_rect");
+		// rect2.classList = "rectangle";
+		// ar.appendChild(rect2);
+
+
+
+
 
 	}
 
@@ -46,7 +63,7 @@
 		var rects = document.querySelectorAll("#rectanglearea .rectangle");
 		var area = document.getElementById("rectanglearea");
 		for(var i = 0; i < rects.length; i++) {
-	
+
 		}
 	}
 
