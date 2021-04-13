@@ -27,6 +27,7 @@
 
 	// creates the number of rectangles specified in the select.
 	function createRectangles() {
+		// resets the rectangle space every time drop down is changed
 		document.getElementById("rectanglearea").innerHTML = "";
 		let ar = document.getElementById("rectanglearea");
 		var count = document.getElementById("count").value;
@@ -52,6 +53,32 @@
 
    	// Randomly color all of the rectangles
     function colorIt() {
+
+		// let r = Math.floor(Math.random() * 256);
+		// get a list of the rect objects
+		let rects = document.getElementById("rectanglearea").childNodes;
+		let r;
+		let g;
+		let b;
+		// let red = r.toString();
+		// let green = r.toString();
+		// let blue = r.toString();
+
+		for(let i = 0; i < rects.length; i++){
+			r = Math.floor(Math.random() * 256);
+			g =  Math.floor(Math.random() * 256);
+			b = Math.floor(Math.random() * 256);
+
+			rects[i].style.backgroundColor = "rgb("+ r +","+ g +","+ b +")"
+
+		}
+
+
+		// rects[1].style.backgroundColor = "rgb("+ red +","+ green +","+ blue +")"
+
+		//rects[1].setAttribute("style", "background-color:"+(r,r,r));
+
+
     	// your code goes here
     	//you might find the following code snippts useful
     	//var r = Math.floor(Math.random() * 256);
