@@ -41,28 +41,15 @@
 
 
 		}
-		// let rect2 = document.createElement("new_rect");
-		// rect2.classList = "rectangle";
-		// ar.appendChild(rect2);
-
-
-
-
 
 	}
 
    	// Randomly color all of the rectangles
     function colorIt() {
-
-		// let r = Math.floor(Math.random() * 256);
-		// get a list of the rect objects
 		let rects = document.getElementById("rectanglearea").childNodes;
 		let r;
 		let g;
 		let b;
-		// let red = r.toString();
-		// let green = r.toString();
-		// let blue = r.toString();
 
 		for(let i = 0; i < rects.length; i++){
 			r = Math.floor(Math.random() * 256);
@@ -74,24 +61,32 @@
 		}
 
 
-		// rects[1].style.backgroundColor = "rgb("+ red +","+ green +","+ blue +")"
-
-		//rects[1].setAttribute("style", "background-color:"+(r,r,r));
-
-
-    	// your code goes here
-    	//you might find the following code snippts useful
-    	//var r = Math.floor(Math.random() * 256);
     }
 
     // // WARNING: incomplete
 	// Randomly position all the rectangles
 	function moveIt() {
-		var rects = document.querySelectorAll("#rectanglearea .rectangle");
-		var area = document.getElementById("rectanglearea");
-		for(var i = 0; i < rects.length; i++) {
 
+
+		let rects = document.getElementById("rectanglearea").childNodes;
+		let area = document.getElementById("rectanglearea");
+
+		for(let i = 0; i < rects.length; i++) {
+			// allow rects to move
+			rects[i].classList.add("movable");
+
+			// ty stack overflow
+			let maxH = parseInt(window.getComputedStyle(area).height) - parseInt(window.getComputedStyle(rects[i]).height);
+			let maxW = parseInt(window.getComputedStyle(area).width) - parseInt(window.getComputedStyle(rects[i]).width);
+			// move y location
+			rects[i].style.top = Math.floor(Math.random() * maxH) + "px";
+			// move x location
+			rects[i].style.right = Math.floor(Math.random() * maxW) + "px";
 		}
+
+
+
+
 	}
 
 
