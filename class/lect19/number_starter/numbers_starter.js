@@ -19,8 +19,8 @@
         // your code here
      let numberValue = id("num-box").value;
      fetchNum(numberValue);
-     console.log(fetchNum(numberValue));
-     console.log(fact);
+     // console.log(fetchNum(numberValue));
+     // console.log(fact);
 
      // let val =  fetchNum(numberValue);
      // console.log("val",val);
@@ -29,13 +29,16 @@
 
 
     });
+    id("fetch-random-num").addEventListener("click", function(){
+      fetchNum("random");
+    });
   }
 
 
   /**
    * Fetches trivia data about the given numberValue and displays it on the page if
    * successful, logging an error to the console if an error occurred during the request.
-   * @param {int} numberValue - value of number to request trivia for.
+   * @param {string} numberValue - value of number to request trivia for.
    */
   // ,{credentials: 'include'}
 
@@ -48,19 +51,9 @@
         .then(function(){
           console.log(fact);
           showTriviaResult(fact);
-          //return(fact)
+
         });
 
-
-
-
-       // .then(data => );
-
-
-
-        //.catch(checkStatus(response))
-
-    // your code here with fetch with Ajax
 
   }
 
@@ -69,7 +62,7 @@
    * @param {string} response - response string from Numbers API request
    */
   function showTriviaResult(response) {
-    id("output").innerHTML = response;
+    id('output').innerHTML = response;
 
   }
 
