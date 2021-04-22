@@ -6,19 +6,89 @@
  */
 (function() {
   "use strict";
+  const URL = "https://courses.cs.washington.edu/courses/cse154/webservices/pets/ajaxpets.php?animal=";
+  let resp;
+  let inputs;
+  let kittyBox;
+  let puppyBox
 
   window.addEventListener("load", initialize);
+
 
   /*
    * TODO: What do we need to initialize?
    */
   function initialize() {
+    inputs  = document.querySelectorAll("input");
+    kittyBox = inputs[0];
+    puppyBox = inputs[1];
+
+
+    // if(kittyBox.checked === true){
+    //   console.log("true");
+    // }
+    // if (puppyBox.checked === true){
+    //   console.log("puppy");
+    // }
+
+    kittyBox.onclick = function(){
+      console.log("kitty selected");
+      makeRequest();
+
+    };
+    puppyBox.onclick = function(){
+      console.log("puppy selected");
+      makeRequest();
+
+    };
+
   }
 
   /*
    * TODO: Fetch data from the CSE 154 ajax pets api!
    */
   function makeRequest() {
+    id("pictures").innerHTML = "";
+    let animal;
+    if(kittyBox.checked === true){
+      animal = "kitty";
+      console.log(animal);
+    }
+    else if (puppyBox.checked === true){
+      animal = "puppy";
+      console.log(animal);
+    }
+
+    let url = URL + animal;
+    fetch(url)
+        .then(response => response.text())
+        .then(data => resp = data)
+        .then(function(){
+          console.log(resp.split(/\n/));
+          let url_array = resp.split(/\n/);
+          for(let i = 0; i < url_array.length; i++){
+            let img = document.createElement("IMG");
+            img.src = url_array[i];
+            id("pictures").appendChild(img);
+
+          }
+          // let img = document.createElement("IMG");
+          // img.src = resp;
+          // console.log(resp);
+          // fetch(resp)
+          //     .then(function(){
+          //       let img = document.createElement("IMG");
+          //       img.src = imageSource;
+          //       img.setAttribute('id', imageId);
+          //       document.getElementById(containerId).appendChild(img);
+          //       return imageId;
+          //
+          //     })
+
+      //    showTriviaResult(fact);
+
+        });
+
 
   }
 

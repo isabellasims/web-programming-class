@@ -16,16 +16,9 @@
    */
   function init() {
    id("fetch-num").addEventListener("click", function(){
-        // your code here
+     // your code here
      let numberValue = id("num-box").value;
      fetchNum(numberValue);
-     // console.log(fetchNum(numberValue));
-     // console.log(fact);
-
-     // let val =  fetchNum(numberValue);
-     // console.log("val",val);
-     // console.log(fact);
-     //document.write(userInput);
 
 
     });
