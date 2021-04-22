@@ -23,13 +23,10 @@
     kittyBox = inputs[0];
     puppyBox = inputs[1];
 
+    // start with blank selection
+    kittyBox.checked = false;
+    puppyBox.checked = false;
 
-    // if(kittyBox.checked === true){
-    //   console.log("true");
-    // }
-    // if (puppyBox.checked === true){
-    //   console.log("puppy");
-    // }
 
     kittyBox.onclick = function(){
       console.log("kitty selected");
@@ -48,7 +45,9 @@
    * TODO: Fetch data from the CSE 154 ajax pets api!
    */
   function makeRequest() {
+    // clear page on new request
     id("pictures").innerHTML = "";
+
     let animal;
     if(kittyBox.checked === true){
       animal = "kitty";
@@ -65,29 +64,15 @@
         .then(data => resp = data)
         .then(function(){
           console.log(resp.split(/\n/));
+          // parse text into list
           let url_array = resp.split(/\n/);
           for(let i = 0; i < url_array.length; i++){
+            // add each img url as an img to pictures div
             let img = document.createElement("IMG");
             img.src = url_array[i];
             id("pictures").appendChild(img);
 
-          }
-          // let img = document.createElement("IMG");
-          // img.src = resp;
-          // console.log(resp);
-          // fetch(resp)
-          //     .then(function(){
-          //       let img = document.createElement("IMG");
-          //       img.src = imageSource;
-          //       img.setAttribute('id', imageId);
-          //       document.getElementById(containerId).appendChild(img);
-          //       return imageId;
-          //
-          //     })
-
-      //    showTriviaResult(fact);
-
-        });
+          }});
 
 
   }
